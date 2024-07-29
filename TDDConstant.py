@@ -5,6 +5,7 @@ TDDSTYLE        = 'TDD Style'
 GENERAL         = 'General'
 LABEL           = 'Label'
 DOCUMENT        = 'Document'
+NAME       = 'Name'
 
 GENETATE_TDD    = 'Generate TDD'
 ADD_LABEL       = 'Add label'

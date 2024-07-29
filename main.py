@@ -51,6 +51,7 @@ class Window(QWidget):
         layout.addStretch()
         labelTab.setLayout(layout)
         labelButton.clicked.connect(lambda:self.addLabelsToList())
+        self.labelList.addItem(variables.LABELS_LIST)
         return labelTab
 
     # File dialog box for template, labels, project

@@ -7,7 +7,7 @@ def labelDict(label = {}):
     labelDict.label = label
 
 def elementFromProject(xmlFile):
-    with open(xmlFile) as f:
+    with open(xmlFile, encoding='utf-8-sig') as f:
         soup = BeautifulSoup(f, constants.XML)
     results = soup.find_all(constants.CONTENT)
     elementDict = {}
@@ -236,7 +236,7 @@ def parseElement_property(xmlFile):
         if(elemTag != 'Name' and (elem.text is not None and elem.text.strip() != '')):
             counter += 1
             valueText = elem.text
-            if(elemTag == 'Label' or elemTag == 'DeveloperDocumentation'):
+            if(elemTag == 'Label' or elemTag == 'HelpText' or elemTag == 'DeveloperDocumentation'):
                 valueText = getLabel(elem.text)
             propertyDict[counter] = [elemTag, valueText]
     return None if counter == 0 else propertyDict
@@ -602,7 +602,7 @@ def parseMenu_recursive(tree_in, parent_name, menuDict):
             for properties in list(tags):
                 if(properties.tag != 'Name' and properties.tag != 'Elements' and properties.text is not None):
                     valueText = properties.text
-                    if(properties.tag == 'Label'):
+                    if(properties.tag == 'Label' or properties.tag == 'HelpText'):
                         valueText = getLabel(valueText)
                     property += properties.tag + ': ' + valueText + '\n'
             parseMenu.counter += 1
@@ -630,7 +630,7 @@ def parseMenuExt_recursive(tree_in, parent_name, menuDict):
             for properties in list(tags):
                 if(properties.tag != 'Name' and properties.tag != 'Elements' and properties.text is not None):
                     valueText = properties.text
-                    if(properties.tag == 'Label'):
+                    if(properties.tag == 'Label' or properties.tag == 'HelpText'):
                         valueText = getLabel(valueText)
                     property += properties.tag + ': ' + valueText + '\n'
             parseMenuExt.counter += 1
