@@ -1,3 +1,4 @@
+# TDD constants
 TDD_GENRATOR    = 'TDD Generator'
 NA              = 'N/A'
 TDDSTYLE        = 'TDD Style'

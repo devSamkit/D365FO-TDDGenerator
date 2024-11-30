@@ -1,3 +1,4 @@
+# TDD variables
 TEMPLATE_TXT = 'Select template'
 PROJECT_TXT = 'Select project'
 METADATA_TXT = 'Select metadata folder'

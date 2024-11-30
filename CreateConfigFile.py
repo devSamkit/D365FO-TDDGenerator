@@ -1,3 +1,5 @@
+#Create config file or update
+
 import configparser
 import os
 import ConfigConstant as constants

@@ -1,3 +1,4 @@
+#Config constants
 CONFIG_FILE_NAME    = 'configfile.ini'
 OPEN_TEXT_MODE      = 'w'
 LABEL_SEPARATOR     = ','

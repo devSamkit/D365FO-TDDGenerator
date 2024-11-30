@@ -1,3 +1,4 @@
+# main class for TDD generator
 import sys
 import TDDConstant as constants
 from PyQt6.QtWidgets import *

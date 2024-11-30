@@ -1,3 +1,5 @@
+# XML parse elements
+
 XML = 'xml'
 CONTENT = 'Content'
 INCLUDE = 'Include'
